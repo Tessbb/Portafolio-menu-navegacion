@@ -1,5 +1,7 @@
 fetch('nav.html')
-.then(res => res.text())
-.then(text => {
-    document.getElementById('navbar-placeholder').innerHTML = text;
-});
+    .then(res => res.text())
+    .then(text => {
+        let placeholder = document.getElementById('navbar-placeholder');
+        placeholder.innerHTML = text;
+    })
+    .catch(err => console.error('Error loading navigation:', err));
